@@ -25,3 +25,28 @@ bulb.src = "img/yellow_lamp.png"
 // COSA DEVE FARE IL CODICE:
 // Lampadina spenta  Mostra immagine accesa + bottone "Spegni"
 // Lampadina accesa  Mostra immagine spenta + bottone "Accendi"
+
+OnBtn.addEventListener("click", function () { 
+    //Con src.includes controllo se nella stringa dell'attributo src dell'immagine c'è la parola "white_lamp.png".
+  if (bulb.src.includes("white_lamp.png")) {
+    // Se l'immagine attuale è la lampadina SPENTA:
+    bulb.src = "img/yellow_lamp.png";//accendo la lampadina
+    OnBtn.textContent = "Spegni";//cambio il testo del bottone dinamicamente usando .textContent
+  } else {
+    // Se invece è già accesa:
+    bulb.src = "img/white_lamp.png";//spengo la lampadina
+    OnBtn.textContent = "Accendi"; //ricambio nuovamente il testo del bottone
+  }
+});
+
+/* COMMENTO FINALE
+Comportamento finale:
+Se la lampadina è spenta, al click:
+
+si accende (cambia immagine)
+il bottone diventa "Spegni"
+
+Se è accesa, al click:
+
+si spegne
+il bottone torna a "Accendi" */
