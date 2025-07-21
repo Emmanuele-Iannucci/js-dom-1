@@ -16,3 +16,12 @@ OnBtn.addEventListener ('click', function(){
 bulb.src = "img/yellow_lamp.png"
 
 })
+
+// BONUS ragionamento...
+// Al primo click: la lampadina si accende e il bottone dice “Spegni”
+// Al secondo click: si spegne e il bottone dice “Accendi”
+// E così via...
+// Quindi probabilmente devo aggiungere una funzione che includa un if:
+// COSA DEVE FARE IL CODICE:
+// Lampadina spenta  Mostra immagine accesa + bottone "Spegni"
+// Lampadina accesa  Mostra immagine spenta + bottone "Accendi"
