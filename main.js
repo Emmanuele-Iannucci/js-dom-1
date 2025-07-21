@@ -7,6 +7,7 @@ console.log(bulb)
 const OnBtn = document.getElementById ("accendere")
 console.log(OnBtn)
 
+const Toggle = document.getElementById ("Accendi/Spegni")
 /* SECONDO STEP:
 Aggiungo un evento click al bottone e creo dunque la funzione in modo che la
 lampadina si accenda */
@@ -26,16 +27,16 @@ bulb.src = "img/yellow_lamp.png"
 // Lampadina spenta  Mostra immagine accesa + bottone "Spegni"
 // Lampadina accesa  Mostra immagine spenta + bottone "Accendi"
 
-OnBtn.addEventListener("click", function () { 
+Toggle.addEventListener("click", function () { 
     //Con src.includes controllo se nella stringa dell'attributo src dell'immagine c'è la parola "white_lamp.png".
   if (bulb.src.includes("white_lamp.png")) {
     // Se l'immagine attuale è la lampadina SPENTA:
     bulb.src = "img/yellow_lamp.png";//accendo la lampadina
-    OnBtn.textContent = "Spegni";//cambio il testo del bottone dinamicamente usando .textContent
+    Toggle.textContent = "Spegni";//cambio il testo del bottone dinamicamente usando .textContent
   } else {
     // Se invece è già accesa:
     bulb.src = "img/white_lamp.png";//spengo la lampadina
-    OnBtn.textContent = "Accendi"; //ricambio nuovamente il testo del bottone
+    Toggle.textContent = "Accendi"; //ricambio nuovamente il testo del bottone
   }
 });
 
